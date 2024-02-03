@@ -115,7 +115,8 @@ a:focus {
 }
 
 .project .project-items .item .info p {
-  font-size: 15px;
+  color: #b4b4b4;
+  font-size: 16px;
 }
 
 .project .project-items .item .info a {
