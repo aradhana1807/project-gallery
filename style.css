@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  
+  font-family: 'Fira Code', monospace;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+body {
+  background-color: #201f1f;
+  color: #f1eeee;
+}
+
+a {
+  text-decoration: none;
+  color: #f1eeee;
+}
+
+a:visited {
+  color: #922a2a;
+}
+
+a:hover {
+  color: #922a2a;
+}
+
+a:focus {
+  color: #922a2a;
+}
+
+
+
+.project {
+  padding: 45px 85px;
+}
+
+.project .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.project h3 {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.project .header button {
+  background-color: #161515;
+  padding: 10px 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+.project .header button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project .header button i {
+  font-size: 26px;
+}
+
+.project .project-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.project .project-items .item {
+  width: 30%;
+  background-color: #161515;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.project .project-items .item:hover {
+  border-color: #922a2a;
+}
+
+.project .project-items .item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 20px 20px;
+}
+
+.project .project-items .item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 32px 42px;
+}
+
+.project .project-items .item .info p {
+  font-size: 15px;
+}
+
+.project .project-items .item .info a {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: #922a2a;
+}
+
+.project .project-items .item .info a i {
+  margin-left: 2px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .project .header h3 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .project .project-items {
+    gap: 22px;
+    justify-content: center;
+  }
+
+  .project .project-items .item {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    padding: 60px 42px;
+  }
+
+  .project .project-items {
+    gap: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project .header button {
+    font-size: 10px;
+    padding: 8px 14px;
+  }
+
+  .project .header button a {
+    display: none;
+  }
+
+  .project .project-items .item {
+    width: 80%;
+  }
+}
