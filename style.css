@@ -265,3 +265,52 @@ a:focus {
     font-size: 11px;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  a {
+    text-decoration: none;
+    color: #f1eeee;
+  }
+
+  a:visited {
+    color: #DED0B6;
+  }
+
+  a:hover {
+    color: #DED0B6;
+  }
+
+  a:focus {
+    color: #DED0B6;
+  }
+
+  body {
+    background-color: #EBE3D5;
+    color: #131010;
+  }
+
+  .project .project-items .item {
+    background-color: #342929;
+  }
+
+  .project .project-items .item:hover {
+    border-color: #8a7272;
+  }
+
+  .project .project-items .item .info h4 {
+    color: #ffffff;
+  }
+
+  .project .project-items .item .info p {
+    color: #d7d7d7;
+    font-size: 15px;
+  }
+
+  .project .project-items .item .info a {
+    text-decoration-color: #a38484;
+  }
+
+  .skill-items li {
+    background-color: #c8ae7d;
+  }
+}
