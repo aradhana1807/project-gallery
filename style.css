@@ -155,6 +155,7 @@ a:focus {
   font-size: 12px;
 }
 
+/* back-to-top */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
