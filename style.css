@@ -110,7 +110,7 @@ a:focus {
   height: 240px;
   object-fit: cover;
   object-position: top;
-  /* border-radius: 10px 10px 20px 20px; */
+  border-radius: 10px 10px 10px 10px;
 }
 
 .project .project-items .item .info {
@@ -121,7 +121,7 @@ a:focus {
 }
 
 .project .project-items .item .info h4 {
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .project .project-items .item .info p {
@@ -147,7 +147,7 @@ a:focus {
 .project .project-items .item .info a {
   font-size: 13px;
   text-decoration: underline;
-  text-underline-offset: 10px;
+  text-underline-offset: 5px;
   text-decoration-color: #d06b6b;
 }
 
