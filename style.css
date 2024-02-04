@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #201f1f;
+  background-color: #1e1e1efd;
   color: #f1eeee;
 }
 
@@ -36,7 +36,7 @@ a:focus {
 }
 
 .project {
-  padding: 45px 85px;
+  padding: 55px 85px;
 }
 
 .project .header {
@@ -48,7 +48,6 @@ a:focus {
 
 .project .header h3 {
   font-size: 40px;
-  margin-top: 5px;
 }
 
 .project .header button {
@@ -87,14 +86,14 @@ a:focus {
 .project .project-items {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .project .project-items .item {
-  width: 30%;
+  width: 45%;
   background-color: #131010;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 10px;
   border-bottom: 4px solid transparent;
   cursor: pointer;
@@ -111,7 +110,7 @@ a:focus {
   height: 240px;
   object-fit: cover;
   object-position: top;
-  border-radius: 10px 10px 20px 20px;
+  /* border-radius: 10px 10px 20px 20px; */
 }
 
 .project .project-items .item .info {
@@ -120,12 +119,14 @@ a:focus {
   gap: 14px;
   padding: 20px 32px 42px;
 }
+
 .project .project-items .item .info h4 {
-  font-size: 18px;
+  font-size: 22px;
 }
+
 .project .project-items .item .info p {
   color: #b4b4b4;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .skill-items {
@@ -221,7 +222,7 @@ a:focus {
 
 @media screen and (max-width: 576px) {
   .project {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
 
   .project .header h3 {
@@ -230,11 +231,37 @@ a:focus {
   }
 
   .project .header button {
-    font-size: 10px;
-    padding: 8px 14px;
+    padding: 8px 10px;
   }
 
   .project .project-items .item {
-    width: 80%;
+    margin-bottom: 15px;
+    width: 95%;
+  }
+  .project .project-items .item img {
+    height: 180px;
+  }
+
+  .project .project-items .item .info {
+    gap: 12px;
+    padding: 10px 22px 24px;
+  }
+
+  .project .project-items .item .info h4 {
+    font-size: 18px;
+  }
+
+  .project .project-items .item .info p {
+    font-size: 13px;
+  }
+
+  .skill-items li {
+    font-size: 8px;
+    padding: 4px;
+    width: 30%;
+  }
+
+  .project .project-items .item .info a {
+    font-size: 11px;
   }
 }
