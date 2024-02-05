@@ -94,7 +94,7 @@ a:focus {
   width: 30%;
   background-color: #131010;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   border-bottom: 4px solid transparent;
   cursor: pointer;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
@@ -110,7 +110,8 @@ a:focus {
   height: 240px;
   object-fit: cover;
   object-position: top;
-  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .project .project-items .item .info {
@@ -238,8 +239,9 @@ a:focus {
     margin-bottom: 15px;
     width: 95%;
   }
+
   .project .project-items .item img {
-    height: 180px;
+    height: 200px;
   }
 
   .project .project-items .item .info {
