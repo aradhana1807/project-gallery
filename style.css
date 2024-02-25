@@ -98,7 +98,8 @@ a:focus {
   border-bottom: 4px solid transparent;
   cursor: pointer;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .project .project-items .item:hover {
@@ -194,6 +195,7 @@ a:focus {
   transform: translateY(-4px);
 }
 
+
 @media screen and (max-width: 1200px) {
   .project .header h3 {
     font-size: 32px;
@@ -275,19 +277,19 @@ a:focus {
   }
 
   a:visited {
-    color: #DED0B6;
+    color: #ded0b6;
   }
 
   a:hover {
-    color: #DED0B6;
+    color: #ded0b6;
   }
 
   a:focus {
-    color: #DED0B6;
+    color: #ded0b6;
   }
 
   body {
-    background-color: #EBE3D5;
+    background-color: #ebe3d5;
     color: #131010;
   }
 
