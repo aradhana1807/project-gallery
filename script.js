@@ -8,8 +8,6 @@ window.addEventListener("scroll", () => {
   }
 })
 
-
-
 const gridItems = document.querySelectorAll('.item');
 
 
@@ -26,4 +24,9 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 gridItems.forEach(item => {
   observer.observe(item);
+});
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.container'),
+  smooth: true
 });
