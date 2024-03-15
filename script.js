@@ -1,3 +1,16 @@
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.container'),
+  smooth: true
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  function ScrollUpdateDelay() {
+    setTimeout(function () { scroll.update(); }, 500);
+  }
+  ScrollUpdateDelay();
+});
+
 const toTop = document.querySelector('.back-to-top');
 
 window.addEventListener("scroll", () => {
@@ -8,8 +21,8 @@ window.addEventListener("scroll", () => {
   }
 })
 
-const gridItems = document.querySelectorAll('.item');
 
+const gridItems = document.querySelectorAll('.item');
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry, index) => {
@@ -26,7 +39,3 @@ gridItems.forEach(item => {
   observer.observe(item);
 });
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('.container'),
-  smooth: true
-});
