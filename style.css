@@ -97,7 +97,6 @@ a:focus {
   cursor: pointer;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
   opacity: 0;
-  opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
 }
