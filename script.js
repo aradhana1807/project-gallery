@@ -22,20 +22,30 @@ window.addEventListener("scroll", () => {
 })
 
 
-const gridItems = document.querySelectorAll('.item');
+// const gridItems = document.querySelectorAll('.item');
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('fadeIn');
-      }, index * 200);
-      observer.unobserve(entry.target);
-    }
-  });
-});
+// const observer = new IntersectionObserver((entries, observer) => {
+//   entries.forEach((entry, index) => {
+//     if (entry.isIntersecting) {
+//       setTimeout(() => {
+//         entry.target.classList.add('fadeIn');
+//       }, index * 200);
+//       observer.unobserve(entry.target);
+//     }
+//   });
+// });
 
-gridItems.forEach(item => {
-  observer.observe(item);
-});
+// gridItems.forEach(item => {
+//   observer.observe(item);
+// });
 
+
+const tl = gsap.timeline();
+
+tl.from('.item',
+  {
+    duration: 1,
+    stagger: 0.3,
+    opacity: 0,
+    y: 100
+  })

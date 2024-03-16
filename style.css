@@ -96,15 +96,15 @@ a:focus {
   border-bottom: 4px solid transparent;
   cursor: pointer;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s; */
 }
 
-.item.fadeIn {
+/* .item.fadeIn {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 .project .project-items .item:hover {
   border-color: #922a2a;
@@ -231,7 +231,7 @@ a:focus {
     padding: 40px 40px;
   }
 
-  .project .header{
+  .project .header {
     align-items: flex-end;
   }
   .project .header h3 {
