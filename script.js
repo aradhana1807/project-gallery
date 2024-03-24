@@ -1,42 +1,55 @@
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('.container'),
-//   smooth: true
+// function init() {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const locoScroll = new LocomotiveScroll({
+//     el: document.querySelector(".container"),
+//     smooth: true
+//   });
+
+//   locoScroll.on("scroll", ScrollTrigger.update);
+
+//   ScrollTrigger.scrollerProxy(".container", {
+//     scrollTop(value) {
+//       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//       return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+//     },
+//     pinType: document.querySelector(".container").style.transform ? "transform" : "fixed"
+//   });
+
+//   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+//   ScrollTrigger.refresh();
+// }
+// init();
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+
+//   function ScrollUpdateDelay() {
+//     setTimeout(function () { scroll.update(); }, 500);
+//   }
+//   ScrollUpdateDelay();
 // });
 
-function init() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".container"),
-    smooth: true
-  });
-
-  locoScroll.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy(".container", {
-    scrollTop(value) {
-      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    pinType: document.querySelector(".container").style.transform ? "transform" : "fixed"
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-  ScrollTrigger.refresh();
-}
-init();
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  function ScrollUpdateDelay() {
-    setTimeout(function () { scroll.update(); }, 500);
-  }
-  ScrollUpdateDelay();
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+  direction: "vertical",
+  gestureDirection: "vertical",
+  smooth: true,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  wheelMultiplier: 3,
 });
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 const toTop = document.querySelector('.back-to-top');
 
@@ -49,25 +62,9 @@ window.addEventListener("scroll", () => {
 })
 
 
-// const gridItems = document.querySelectorAll('.item');
 
-// const observer = new IntersectionObserver((entries, observer) => {
-//   entries.forEach((entry, index) => {
-//     if (entry.isIntersecting) {
-//       setTimeout(() => {
-//         entry.target.classList.add('fadeIn');
-//       }, index * 200);
-//       observer.unobserve(entry.target);
-//     }
-//   });
-// });
-
-// gridItems.forEach(item => {
-//   observer.observe(item);
-// });
-
-
-const tl = gsap.timeline();
+const tl = gsap.timeline(
+);
 
 function createTimeLoader() {
   let randomValue = 0
@@ -83,7 +80,6 @@ function createTimeLoader() {
   }, 100);
 }
 
-
 tl.to("#loader h1", {
   scale: 1.5,
   delay: 0.5,
@@ -94,7 +90,14 @@ tl.to("#loader h1", {
 tl.to("#loader", {
   top: "-100vh",
   delay: 0.3,
-  duration: 1.5
+  duration: 1
+})
+
+tl.from(".header .info, .header a", {
+  duration: 1,
+  opacity: 0,
+  y: -100,
+  stagger: 0.3
 })
 
 
@@ -102,5 +105,11 @@ tl.from('.item', {
   duration: 1,
   stagger: 0.3,
   opacity: 0,
-  y: 100
+  y: 100,
+  // scrollTrigger: {
+  //   trigger: ' .project-items',
+  //   start: 'top bottom',
+  //   end: 'bottom bottom',
+  //   scrub: 1
+  // }
 })
